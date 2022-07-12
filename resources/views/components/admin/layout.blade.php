@@ -22,7 +22,7 @@
     <body>
 
             <x-admin.navigation />
-            @include('components.layouts._main-mobile-navigation')
+            <x-admin-mobile-navigation />
 
 
         {{ $slot }}
