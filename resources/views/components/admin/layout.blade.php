@@ -22,7 +22,7 @@
     <body>
 
             <x-admin.navigation />
-            <x-admin-mobile-navigation />
+            <x-admin.mobile-navigation />
 
 
         {{ $slot }}

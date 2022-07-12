@@ -21,8 +21,8 @@
     </head>
     <body>
 
-            <x-posts.post-navigation />
-            <x-post-mobile-navigation />
+            <x-posts.navigation />
+            <x-posts.mobile-navigation />
 
 
         {{ $slot }}
