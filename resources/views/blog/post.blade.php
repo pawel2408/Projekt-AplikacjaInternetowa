@@ -12,7 +12,7 @@
                         Autor <a href="blog-grid.html" class="ease-in duration-300 text-secondary-color hover:text-primary-color">{{ $post->author->name}}</a>
                     </li>
                 </ul>
-                <img src="{{ $post->thumbnail }}" class=" mb-15 md:mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="blog-details">
+                <img src="/storage/{{ $post->thumbnail }}" class=" mb-15 md:mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="blog-details">
                 {{-- <img src="../assets/img/blog/blog-img6.jpg" class=" mb-15 md:mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="blog-details">
                  --}}
                 <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
