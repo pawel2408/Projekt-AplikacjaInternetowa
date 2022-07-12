@@ -47,7 +47,7 @@
             <span class="p-4">{{ $posts->links() }}</span>
             
           @else
-              <p>Brak wyników <a href="/blog" class="p-4">Powród do bloga</a></p>
+              <p>Brak wyników <a href="/" class="ml-4">Powrót na stronę główną</a></p>
           @endif
 
         </div>

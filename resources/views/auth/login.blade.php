@@ -1,4 +1,4 @@
-<x-layouts.main-layout>
+<x-main-layout>
 
      <!-- Page Title Area -->
 	 <div class="relative z-1 text-center pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
@@ -62,6 +62,6 @@
 		</div>
 	</div>
 
-</x-layouts.main-layout>
+</x-main-layout>
 
 
