@@ -14,11 +14,11 @@ Route::get('/', function () {
 });
 Route::get('/contact', function () {
     // return str('hello world');
-    return view('static.kontakt');
+    return view('kontakt');
 });
 Route::get('/dashboard', function () {
     // return str('hello world');
-    return view('static.dashboard');
+    return view('dashboard');
 });
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
