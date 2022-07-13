@@ -8,7 +8,7 @@ class SessionsController extends Controller
 {
     public function create()
     {
-        return view('auth.login');
+        return view('/');
     }
 
     public function store()
