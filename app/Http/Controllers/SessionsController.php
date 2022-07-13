@@ -25,7 +25,7 @@ class SessionsController extends Controller
         {
             session()->regenerate();
             
-            return redirect('/')->with('success', 'Witaj, ');
+            return redirect('/blog')->with('success', 'Witaj, ');
         }
 
         // REDIRECT WITH A SUCCESS FLASH MESSAGE
