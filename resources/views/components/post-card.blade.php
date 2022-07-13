@@ -1,10 +1,8 @@
 <div class="single-blog-post">
     <a href="" class="d-block">
-      <img
-        src="{{ asset('storage/' . $post->thumbnail) }}"
-        {{-- src="assets/img/blog/blog-img6.jpg" --}}
-        class="rounded-md mb-25 inline-block"
-        alt="blog-image"
+      <img src="{{ $post->image->url() }}"
+           class="rounded-md mb-25 inline-block"
+           alt="blog-image"
       />
     </a>
     <span

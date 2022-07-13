@@ -2,6 +2,17 @@
     <!-- Blog Details Area -->
     <div class="pt-60 md:pt-80 lg:pt-100 pb-60 md:pb-80 lg:pb-100">
         <div class="container">
+
+            {{-- @if($post->image)
+                <div style="background-image: rul('{{ $post->image->url() }}')">
+
+                </div>
+            @else
+                <h1>
+
+                </h1>
+            @endif --}}
+
             <div class="xl:max-w-[1110px] xl:ml-auto xl:mr-auto">
                 <h3 class="font-extrabold text-18px md:text-22px lg:text-25px xl:text-30px mb-12 lg:mb-18">{{ $post->title }}</h3>
                 <ul class="mb-8 md:mb-22">
@@ -12,9 +23,9 @@
                         Autor <a href="blog-grid.html" class="ease-in duration-300 text-secondary-color hover:text-primary-color">{{ $post->author->name}}</a>
                     </li>
                 </ul>
-                <img src="/storage/{{ $post->thumbnail }}" class=" mb-15 md:mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="blog-details">
-                {{-- <img src="../assets/img/blog/blog-img6.jpg" class=" mb-15 md:mb-25 rounded-sm md:rounded-md lg:rounded-lg" alt="blog-details">
-                 --}}
+                <img src="{{ $post->image->url() }}" 
+                     class=" mb-15 md:mb-25 rounded-sm md:rounded-md lg:rounded-lg" 
+                     alt="blog-details">
                 <p class="text-13px md:text-15px lg:text-16px leading-7 md:leading-8 text-optional-color mb-15 last:mb-0">
                     {{ $post->body }}
                 </p>

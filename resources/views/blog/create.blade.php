@@ -17,7 +17,7 @@
                <div class="lg:pl-15">
                    <h2 class="font-bold text-22px md:text-30px lg:text-35px mb-25 text-black-color">Do dzieła</h2>
                    
-                   <form action="/admin/blog" 
+                   <form action="/create" 
                          enctype="multipart/form-data" 
                          method="POST">
                        @csrf  

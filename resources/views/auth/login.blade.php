@@ -16,7 +16,7 @@
 					<h2 class="font-bold text-22px md:text-30px lg:text-35px mb-25 text-black-color">Logowanie</h2>
 
 					<form method="POST" 
-						  action='/login'>
+						  action='/'>
 						  @csrf
 
 						<div class="mb-25">

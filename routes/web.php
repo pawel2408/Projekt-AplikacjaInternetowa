@@ -61,5 +61,8 @@ Route::post('/', [SessionsController::class, 'destroy'])->middleware('auth');
  *  
  */
 
- Route::get('admin/blog/create', [PostController::class, 'create']);
- Route::post('admin/blog', [PostController::class, 'store']);
+//  Route::get('admin/blog/create', [PostController::class, 'create'])->middleware(('admin'));
+//  Route::post('admin/blog', [PostController::class, 'store'])->middleware(('admin'));
+
+ Route::get('/create', [PostController::class, 'create']);
+ Route::post('/create', [PostController::class, 'store']);

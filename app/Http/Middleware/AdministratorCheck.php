@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class OnlyAdministrator
+class AdministratorCheck
 {
     /**
      * Handle an incoming request.
@@ -21,7 +21,7 @@ class OnlyAdministrator
             abort(Response::HTTP_FORBIDDEN);
         }
 
-        if(auth()->user()->username !== 'Alfa') // BOSS = ADMIN sprawdza czy użytkownik jest administratorem
+        if(auth()->user()->username !== 'Alfa-Administrator')
         {
             abort(Response::HTTP_FORBIDDEN);
         }
