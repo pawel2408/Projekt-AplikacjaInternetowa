@@ -1,10 +1,10 @@
 <div class="single-blog-post">
-    <a href="" class="d-block">
+    {{-- <a href="" class="d-block"> --}}
       <img src="{{ $post->image->url() }}"
            class="rounded-md mb-25 inline-block"
            alt="blog-image"
       />
-    </a>
+    {{-- </a> --}}
     <span
       class="block font-medium text-13px md:text-14px lg:text-15px text-secondary-color mb-12"
     >
@@ -13,7 +13,7 @@
     <span
       class="block font-medium text-13px md:text-14px lg:text-15px text-secondary-color mb-12"
     >
-    przez {{ $post->author->name}}
+    {{-- przez {{ $post->author->name}} --}}
   </span>
     <h3
       class="font-bold text-18px md:text-20px lg:text-22px mb-10 lg:mb-12"

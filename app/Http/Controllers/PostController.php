@@ -16,8 +16,9 @@ class PostController extends Controller
     public function index() 
     {
         return view('blog.index', [
-            'posts' => Post::latest()->filter(request(['search']))->paginate(10)->withQueryString(),
-            'categories' => Category::all()
+            'posts' => Post::latest()->filter(request(['search', 'category']))->paginate(10)->withQueryString(),
+            'categories' => Category::all(),
+            'currentCategory' => Category::where('slug', request('category'))->first()
         ]);
     }
 
@@ -30,16 +31,6 @@ class PostController extends Controller
 
     public function create()
     {
-        // if(auth()->guest()) {
-        //     abort(Response::HTTP_FORBIDDEN);
-        // }
-
-        // if(auth()->user()->username !== 'AlphaApe')
-        // {
-        //     abort(Response::HTTP_FORBIDDEN);
-        // }
-
-        // return view('blog.create');
         return view('/blog.create');
     }
 
@@ -47,7 +38,6 @@ class PostController extends Controller
     {
         $attributes = request()->validate([
             'title' => 'required',
-            // 'thumbnail' => 'required|image',
             'slug' => ['required', Rule::unique('posts', 'slug')],
             'excerpt' => 'required',
             'body' => 'required',

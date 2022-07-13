@@ -12,9 +12,6 @@
             </div>
         </div>
         <!-- End Preloader --> --}}
-
-      
-
        
 
         <!-- Main Banner Area -->

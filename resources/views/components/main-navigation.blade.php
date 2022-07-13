@@ -30,22 +30,38 @@
                         
                         @auth
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="/" class="block active text-black-color font-semibold text-16px ease-in duration-300 hover:text-primary-color pt-30 pb-30"
-                                    >Witaj, {{ auth()->user()->username }}
-                                </a>
-                            </li>
-
-                            <form action="/" 
-                                    method="POST">
-                                    @csrf
-
-                                <li class="ml-12 xl:ml-15 mr-15">
-                                    <button type="submit" class="block text-black-color font-semibold text-16px ease-in duration-300 hover:text-primary-color pt-30 pb-30">Wyloguj</button>
-                                </li>
-                            </form>
-
-                            <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">
-                                <a href="/create" class="block active text-black-color font-semibold text-16px ease-in duration-300 hover:text-primary-color pt-30 pb-30">Create</a>
+                                <button 
+                                    class="block active text-black-color font-semibold text-16px ease-in duration-300 hover:text-primary-color pt-30 pb-30"
+                                >
+                                    Witaj, {{ auth()->user()->username }}
+                                </button>
+                                <ul class="absolute bg-white left-0 w-[250px] 
+                                    rounded-sm top-84 z-99 shadow-dropdown pt-10 pb-10 
+                                    opacity-0 invisible ease-in duration-300 group-hover:opacity-100 
+                                    group-hover:visible">
+                                    <li>
+                                        <a href="/dashboard" 
+                                        class="active block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20"
+                                            >Panel
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="/create" 
+                                        class="block font-medium text-16px text-black-color ease-in duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20"
+                                            >Napisz posta
+                                        </a>
+                                    </li>
+                                    <li class="block font-medium text-16px text-black-color ease-in 
+                                        duration-300 hover:text-primary-color pt-9 pb-9 pl-20 pr-20">
+                                        <form action="/" 
+                                        method="POST">
+                                        @csrf
+                                            <button type="submit">
+                                                    Wyloguj
+                                            </button>
+                                        </form>
+                                    </li>
+                                </ul>
                             </li>
                         @else
                             <li class="ml-12 xl:ml-15 mr-12 xl:mr-15 relative group">

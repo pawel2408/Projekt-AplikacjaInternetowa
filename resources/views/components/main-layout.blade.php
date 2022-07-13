@@ -11,13 +11,15 @@
         <link rel="stylesheet" href="assets/css/animate.min.css">
         <link rel="stylesheet" href="assets/dist/output.css">
 
-        <title>Togy - Tailwind Technology Startup Template</title>
+        <title>Aplikacja</title>
         <link rel="icon" type="image/png" href="assets/img/favicon.png">
+        <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
         <!-- Google Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
     </head>
     <body>
 
