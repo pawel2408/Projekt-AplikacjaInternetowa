@@ -75,4 +75,9 @@ class PostController extends Controller
 
         return redirect()->route('blog', ['post' => $request->id]);
     }
+
+    public function edit($id)
+    {
+        return view('blog.edit', ['post' => Post::findOrFali($id)]);
+    }
 }

@@ -4,6 +4,7 @@ use App\Models\User;
 use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\SessionsController;
@@ -16,10 +17,7 @@ Route::get('/contact', function () {
     // return str('hello world');
     return view('kontakt');
 });
-Route::get('/dashboard', function () {
-    // return str('hello world');
-    return view('dashboard');
-});
+
 
 Route::get('/blog', [PostController::class, 'index'])->name('blog');
 Route::get('/blog/{post:slug?}', [PostController::class, 'show'])->name('show');
@@ -72,5 +70,9 @@ Route::post('/', [SessionsController::class, 'destroy'])->middleware('auth');
 //  Route::get('admin/blog/create', [PostController::class, 'create'])->middleware(('admin'));
 //  Route::post('admin/blog', [PostController::class, 'store'])->middleware(('admin'));
 
+ Route::get('/admin/index', [AdminController::class, 'index']);
  Route::get('/create', [PostController::class, 'create']);
  Route::post('/create', [PostController::class, 'store']);
+
+ Route:: resource('blog', PostController::class)
+    ->only(['index', 'show', 'create', 'store', 'edit', 'update']);

@@ -2,10 +2,10 @@
     <div class="togy-responsive-nav lg:hidden">
         <div class="container">
             <div class="togy-responsive-menu">
-                <div class="logo">
+                {{-- <div class="logo">
                     <a href="index.html">
                         <img src="assets/img/logo.png" alt="logo">
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>

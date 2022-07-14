@@ -27,7 +27,8 @@
 							<input type="email" 
 								   name="email"
 								   value="{{ old('email')}}"
-								   placeholder="email" 
+								   placeholder="email"
+								   autocomplete="username" 
 								   class="block w-full text-black-color bg-[#F5F0E8] h-50 lg:h-60 leading-[50px] lg:leading-[60px] rounded-sm pl-15 pr-15 md:pl-20 md:pr-20 placeholder:text-optional-color outline-0 placeholder:ease-in placeholder:duration-300 focus:placeholder:text-transparent text-13px md:text-15px lg:text-16px">
 
 								@error('email')

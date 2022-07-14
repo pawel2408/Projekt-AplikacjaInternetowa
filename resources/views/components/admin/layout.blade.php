@@ -30,7 +30,7 @@
 
 
             <!-- Copyright Area -->
-            <x-footer.copyright-area />
+            {{-- <x-footer.copyright-area /> --}}
 
             <!-- Go Top Button-->
             <x-go-top />

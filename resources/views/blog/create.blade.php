@@ -11,16 +11,20 @@
 
    <div class="pt-40 mx-auto">
        <div class="container mx-auto p-20">
-           <div class="mx-auto p-20">
-               <div class="mx-auto p-20">
 
-               <div class="mx-auto p-20">
+
+
+
                    <h2 class="font-black text-25px md:text-35px lg:text-40px xl:text-48px 2xl:text-54px text-black-color mb-8">Napisza <span class="text-primary-color">Posta</span></h2>
-                   <div class="p-20">
+
+                    <div class="container mx-auto flex">
+                    <div style="max-width:280px; magin-right:20px">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore ab inventore animi. Laboriosam, voluptate quidem. Fugit neque natus quo libero reprehenderit illum explicabo amet asperiores maiores! Dolorem ullam magni tempora.
+                    </div>
+                    <div style="max-width:700px">
                    <form action="/create" 
                          enctype="multipart/form-data" 
                          method="POST"
-                         class="mx-auto p-20"
                          >
                          @csrf  
 
@@ -60,7 +64,6 @@
                         <x-submit-button>Publikuj</x-submit-button>
 
                    </form>
-                </div>
                </div>
            </div>
        </div>
